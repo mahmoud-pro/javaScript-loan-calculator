@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"
+      integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <form class="loan-form">
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount"
+                    placeholder="Loan Amount"
+                  />
+                </div>
+              </div>
+            </form>
+            <form class="loan-form">
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">%</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="interest"
+                    placeholder="Interest"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="years"
+                  placeholder="Years To Repay"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  id="loan-form-btn"
+                  class="btn btn-dark btn-block mt-2"
+                  value="Calculate"
+                />
+              </div>
+            </form>
+
+            <div id="loading">
+              <img src="./img/loading.gif" alt="loading" />
+            </div>
+
+            <div id="result" class="pt-4">
+              <h5>Results</h5>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Monthly Payments</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="monthly-payments"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Total Payments</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-payments"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Total Interest</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-interest"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
